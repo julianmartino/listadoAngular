@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todoList';
+  public tareas = [] 
+  public nuevaTarea
+
+  public agregarNuevaTarea(){
+    this.tareas.push({descripcion: this.nuevaTarea, terminada: false})
+    console.log(this.tareas)
+  }
 }
